@@ -5,9 +5,21 @@ import { Button, Props } from '../src/Button';
 const meta: Meta = {
   title: 'Button',
   component: Button,
+  argTypes: {
+    children: {
+      defaultValue: 'default',
+    },
+  },
 };
 
 export default meta;
 
-export const Default = () => <Button variant="primary">Click me</Button>;
-export const Secondary = () => <Button variant="secondary">I am button</Button>;
+const Template: Story<Props> = (args) => <Button {...args} />;
+
+export const Default = Template.bind({});
+
+export const Secondary = Template.bind({});
+Secondary.args = {
+  variant: 'secondary',
+  children: 'secondary',
+};
