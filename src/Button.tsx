@@ -13,7 +13,7 @@ export const Button = ({ children, variant = 'primary', ...props }: Props) => {
   return (
     <button
       style={{
-        backgroundColor: variant === 'primary' ? 'blue' : 'gray',
+        backgroundColor: variant === 'primary' ? 'blue' : '#595959',
         color: 'white',
         border: 'none',
         borderRadius: 100,
